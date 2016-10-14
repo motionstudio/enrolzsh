@@ -1,0 +1,13 @@
+# Global EnrolZSH Settings
+# ########################
+
+# Project directories
+ER_PROJECT_DIR="~/Projects/public"
+ER_VM_DIR="~/Projects"
+
+# ENROL_AUTOLOAD projects
+ER_AUTOLOAD=(ju test)
+
+# Assign different directory from default one
+ju="${ER_PROJECT_DIR}/just"
+test="~/Projects/public/test"
