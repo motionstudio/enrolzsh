@@ -10,7 +10,7 @@ enrol() {
 
 	# Help screen
 	if [[ $1 == "--help" || $1 == "help" || $1 == "-h" ]]; then
-		echo "EnrolZSH Help: Please read our readme at github.com/";
+		echo "EnrolZSH Help: Read our readme at https://github.com/motionstudio/enrolzsh";
 	fi
 
 	# Show version
@@ -20,8 +20,8 @@ enrol() {
 
 	# Check and maybe run update
 	if [[ $1 == "--update" || $1 == "update" ]]; then
-		echo "Update EnrolZSH";
-		#git pull
+		echo "Update EnrolZSH via Git";
+		git pull
 	fi
 
 }
