@@ -23,7 +23,10 @@ plugins=(git enrolzsh)
 	- **ER_PROJECT_DIR:** The public of the VM (mostly .../public)
 	- All projects are stored inside the `ENROL_PROJECT_DIR`
 - Create a `enrol` folder inside every project you create.
-- Add a `deploy.zsh` file inside the created `enrol` folder an add all your scripts there. A boilerplate is linked here: [EnrolZSH Project Boilerplate](https://github.com/motionstudio/enrolzsh)
+- Add a `deploy.zsh` file inside the created `enrol` folder an add all your scripts there. A boilerplate is linked here: [EnrolZSH Project Boilerplate](https://github.com/motionstudio/enrolzsh_boilerplate)
+- Make sure your current projects are stored inside the global settings. So you don't have to init the project every time.
+	- Add a prefix and the directory at the bottom of `.enrolzsh_global`, like this: `test="~/Projects/public/test"`
+	- Include the prefix inside the variable `ER_AUTOLOAD`
 - You're ready to go.
 
 ## Available commands:
@@ -36,8 +39,8 @@ Type `enr` and <TAB>, then <TAB> again and you will see all your possibilities.
 - `enrol --help`: Help screen
 - `enrol --update`: Update enrol when via git, just works when you've cloned the enrolzsh.
 
-`enrol.projects`: Loads all projects from the main project folder (defined inside the global settings) into the namespace.
-After this command it's possible to call the project via enrol.PROJECT (PROJECT = Folder name without TLD, if you used any). If you had any script in your inside the project it will also work during runtime. This command will do the same as autoload, but just at runtime of the terminal.
+- `enrol.projects`: Loads all projects from the main project folder (defined inside the global settings) into the namespace.
+After this command it's possible to call the project via enrol.PROJECT (PROJECT = Folder name without TLD, if you used any). If you have a script called `deploy.zsh` inside the project it will also work during runtime. This command will do the same as autoload, but only at runtime of the terminal.
 
 Some shorthands for vagrant inside the defined VM folder:
 - `enrol.vu`: vagrant up
