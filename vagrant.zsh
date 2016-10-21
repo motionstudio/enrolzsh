@@ -1,8 +1,8 @@
 # Vagrant Command
 #
 
-enrol.vu() { cd $ER_VM_DIR && vagrant up }
-enrol.vh() { cd $ER_VM_DIR && vagrant halt }
-enrol.vr() { cd $ER_VM_DIR && vagrant reload }
-enrol.vs() { cd $ER_VM_DIR && vagrant ssh }
-enrol.vb() { cd $ER_VM_DIR && vagrant box update }
+enrol.vu() { eval cd $ER_VM_DIR && vagrant up }
+enrol.vh() { eval cd $ER_VM_DIR && vagrant halt }
+enrol.vr() { eval cd $ER_VM_DIR && vagrant reload }
+enrol.vs() { eval cd $ER_VM_DIR && vagrant ssh }
+enrol.vb() { eval cd $ER_VM_DIR && vagrant box update }
