@@ -21,10 +21,14 @@ enrol() {
 	# Check and maybe run update
 	if [[ $1 == "--update" || $1 == "update" ]]; then
 		echo "Update EnrolZSH via Git";
+		cd $ER
 		git pull
 	fi
 
 }
+
+# Store current dir
+CURRENT_DIR=$(pwd)
 
 # Constant
 ER=${0:a:h}
@@ -53,3 +57,6 @@ enrol.projects() {
 		alias "enrol."${project_alias##*/}="cd '${project//\'/\'\\\'\'}' && _enrol_load ${project_alias##*/} ${project//\'/\'\\\'\'}"
 	done
 }
+
+# Restore current dir
+cd $CURRENT_DIR
