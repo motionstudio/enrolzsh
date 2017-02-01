@@ -1,6 +1,6 @@
 # EnrolZSH - ZSH-Plugin
 #
-version="0.1";
+version="0.2";
 
 enrol() {
 	# When there's no argument
@@ -22,7 +22,8 @@ enrol() {
 	if [[ $1 == "--update" || $1 == "update" ]]; then
 		echo "Update EnrolZSH via Git";
 		cd $ER
-		git pull
+	 	git pull
+	 	eval cd $ER_PROJECT_DIR
 	fi
 
 }
@@ -37,9 +38,10 @@ ER_CACHE=$ER/cache
 # Includes
 source $ER/.enrolzsh_global
 
-#source $ER/helper.zsh
+source $ER/helper.zsh
 source $ER/init.zsh
 source $ER/vagrant.zsh
+source $ER/config.zsh
 
 # Init
 _enrol_autoload >& /dev/null # don't return anything

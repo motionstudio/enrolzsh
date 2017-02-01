@@ -79,6 +79,8 @@ _enrol_autoload() {
 
 		eval _enrol_load $prefix \$$prefix
 
+		alias "enrol."$prefix="eval cd \$$prefix"
+
 	done
 
 	# Go back to project dir and not inside last loaded project

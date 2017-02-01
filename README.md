@@ -17,7 +17,7 @@ In the next version we will improve this and ship some predefined commands. We'l
 ```
 plugins=(git enrolzsh)
 ```
-- Configure the global configuration file inside the enrolzsh plugin `.enrolzsh_global`.
+- Configure the global configuration file inside the enrolzsh plugin `~/.oh-my-zsh/plugins/enrolzsh/.enrolzsh_global`.
 - Make sure your folder strucutre looks like this:
 	- **ER_VM_DIR:** Base folder, where the virtual machine lives (e.g ScotchBox)
 	- **ER_PROJECT_DIR:** The public of the VM (mostly .../public)
@@ -42,9 +42,18 @@ Type `enr` and <TAB>, then <TAB> again and you will see all your possibilities.
 - `enrol.projects`: Loads all projects from the main project folder (defined inside the global settings) into the namespace.
 After this command it's possible to call the project via enrol.PROJECT (PROJECT = Folder name without TLD, if you used any). If you have a script called `deploy.zsh` inside the project it will also work during runtime. This command will do the same as autoload, but only at runtime of the terminal.
 
+- To make it easier for you to grasp all available project right of the but. Every autoloaded project will be accessible under `enrol.PREFIX and will direct to the root directory of the project. Just type `enrol.` + TAB for autocompletion and search for your project.
+
 Some shorthands for vagrant inside the defined VM folder:
 - `enrol.vu`: vagrant up
 - `enrol.vh`: vagrant halt
-- `enrol.vr()`: vagrant reload
-- `enrol.vs()`: vagrant ssh
-- `enrol.vb()`: vagrant box update
+- `enrol.vr`: vagrant reload
+- `enrol.vs`: vagrant ssh
+- `enrol.vb`: vagrant box update
+
+Helper functions:
+- `enrol.helper.finder`: Open current directory in finder
+
+Config functions:
+- `enrol.config.global`: Edit global settings directly in CMD (Nano)
+- `enrol.config.finder`: Open finder inside enrolzsh plugin directory
