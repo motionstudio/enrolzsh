@@ -19,8 +19,3 @@ enrol.config.finder() {
 	eval cd ~/.oh-my-zsh/plugins/enrolzsh
 	open .
 }
-
-# Open explorer at global config file
-enrol.config.explorer() {
-	eval cmd.exe /C "explorer \"~\AppData\Local\lxss\home\%USERNAME%\.oh-my-zsh\plugins\enrolzsh\""
-}

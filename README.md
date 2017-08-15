@@ -7,6 +7,7 @@ In the next version we will improve this and ship some predefined commands. We'l
 
 ## Requirements:
 
+- Unix (Linux or MacOS), Windows only partially
 - oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
 - vagrant (not required, but highly recommended)
 
@@ -30,6 +31,9 @@ plugins=(git enrolzsh)
 - You're ready to go.
 
 ## Important notes:
+
+### Operating system
+Enrol supports Linux and MacOS. Windows works mostly iniside it's Unix subsystem, but is not tested and will fall short on certain commands like `enrol.finder`.
 
 ### Custom enrol script:
 When providing a custom enrol script inside the `enrol`-directory make sure to prefix variables when using so. Enrol will load your script inside the global context and this has potential for dramatic issues.
@@ -66,4 +70,3 @@ Helper functions:
 Config functions:
 - `enrol.config.global`: Edit global settings directly in CMD (Nano)
 - `enrol.config.finder`: Open finder inside enrolzsh plugin directory (MacOS)
-- `enrol.config.explorer`: Open explorer inside enrolzsh plugin directory (Windows)
