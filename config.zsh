@@ -10,6 +10,7 @@ enrol.config() {
 
 # Config global setting in nano (command line)
 enrol.config.global() {
+	echo "Make sure to run `enrol.reload` after making changes to the global config!!!!"
 	eval nano ~/.oh-my-zsh/plugins/enrolzsh/.enrolzsh_global
 }
 
