@@ -23,6 +23,7 @@ enrol() {
 		echo "Update EnrolZSH via Git";
 		cd $ER
 	 	git pull
+	 	eval enrol.reload
 	 	eval cd $ER_PROJECT_DIR
 	fi
 
